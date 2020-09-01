@@ -36,7 +36,7 @@ export const GlobalProvider = ({ children }) => {
 	}
 
 	return (
-		<GlobalContext.Provider value={{ addTodo }}>
+		<GlobalContext.Provider value={{ addTodo, state }}>
 			{children}
 		</GlobalContext.Provider>
 	);
