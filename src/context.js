@@ -10,10 +10,9 @@ const initialState = {
 };
 
 export const GlobalContext = createContext(initialState);
-const [state, dispatch] = useReducer(reducer, initialState);
 
 export const GlobalProvider = ({ children }) => {
-	return (
-		<GlobalContext.Provider value={{}}>{children}</GlobalContext.Provider>
-	);
+	const [state, dispatch] = useReducer(reducer, initialState);
+
+	return <GlobalContext.Provider>{children}</GlobalContext.Provider>;
 };
