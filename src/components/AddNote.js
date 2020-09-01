@@ -3,16 +3,9 @@ import { useContext } from 'react';
 import { GlobalContext } from '../context';
 import { useState } from 'react';
 
-export const ACTION = {
-	ADD_TODO: 'add-note',
-	TOGGLE_TODO: 'toggle-note',
-	DELETE_TODO: 'delete-note',
-	SET_CURRENT_NOTE: 'current-note',
-	EDIT_TODO: 'edit-note'
-};
-
 function AddNote() {
-	const { dispatch } = useContext(GlobalContext);
+	const { addTodo } = useContext(GlobalContext);
+	// const { dispatch } = useContext(GlobalContext);
 	const [value, SetValue] = useState({
 		title: 'Title',
 		content: 'Content'
@@ -29,7 +22,7 @@ function AddNote() {
 		if (value === '') {
 			alert('Add note!');
 		} else {
-			dispatch({ type: ACTION.ADD_TODO, payload: value });
+			addTodo(value);
 			SetValue('');
 		}
 	};

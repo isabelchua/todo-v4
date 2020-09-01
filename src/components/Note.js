@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { GlobalProvider } from '../context';
 
 function Note({ note }) {
-	const { dispatch } = useContext(GlobalProvider);
+	// const { dispatch } = useContext(GlobalProvider);
 
 	return (
 		<div>
