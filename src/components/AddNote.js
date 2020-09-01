@@ -22,6 +22,8 @@ function AddNote() {
 		if (value === '') {
 			alert('Add note!');
 		} else {
+			console.log('note');
+
 			addTodo(value);
 			SetValue('');
 		}
